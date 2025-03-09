@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Canteen Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="login-container">
+            <h2>Online Canteen Login</h2>
+            <form id="loginForm" onsubmit="return validateLoginForm()" method="POST">
+                <input type="text" class="input-field" name="username" id="username" placeholder="Enter your username" required>
+                <input type="password" class="input-field" name="password" id="password" placeholder="Enter your password" required>
+                <button type="submit" class="login-btn">Login</button>
+                <div id="login-error" class="error-message"></div>
+            </form>
+            <div class="auth-links">
+                <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+                <span class="auth-divider">|</span>
+                <a href="signup.html">Create an Account</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
