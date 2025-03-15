@@ -8,7 +8,7 @@
     padding: 40px 20px;
     margin-bottom: 30px;
     border-radius: 8px;
-    background-image: linear-gradient(135deg, #4CAF50, #2E7D32);
+    background-image: linear-gradient(135deg, #67ad84, #143d1f);
 }
 
 .menu-banner h1 {
@@ -49,8 +49,8 @@
 }
 
 .category-btn.active {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #d4411d;
+    color: rgb(41, 194, 54);
 }
 
 /* Menu Filters */
@@ -109,7 +109,7 @@
 /* Menu Items Grid */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Always show 2 items side by side */
     gap: 25px;
     margin-bottom: 40px;
 }
@@ -120,6 +120,7 @@
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 400px; /* Ensure consistent height */
 }
 
 .menu-item:hover {
@@ -175,7 +176,7 @@
     color: #4CAF50;
 }
 
-.add-to-cart-btn {
+.order-btn {
     padding: 8px 15px;
     background-color: #4CAF50;
     color: white;
@@ -186,7 +187,7 @@
     transition: background-color 0.3s;
 }
 
-.add-to-cart-btn:hover {
+.order-btn:hover {
     background-color: #45a049;
 }
 
@@ -251,7 +252,12 @@
     }
 
     .menu-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns */
+        gap: 15px; /* Smaller gap on smaller screens */
+    }
+    
+    .menu-item {
+        min-height: 350px; /* Ensure consistent height */
     }
 }
 
@@ -270,6 +276,28 @@
     }
 
     .menu-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); /* Still maintain 2 columns */
+        gap: 10px; /* Even smaller gap on very small screens */
+    }
+    
+    .menu-details {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+    
+    .menu-details h3 {
+        font-size: 16px; /* Smaller font for item titles */
+    }
+    
+    .menu-description {
+        font-size: 12px; /* Smaller font for descriptions */
+    }
+    
+    .menu-price {
+        font-size: 14px; /* Smaller font for price */
+    }
+    
+    .order-btn {
+        padding: 6px 10px; /* Smaller buttons */
+        font-size: 12px;
     }
 }
